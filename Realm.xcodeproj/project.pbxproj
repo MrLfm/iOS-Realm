@@ -13,7 +13,26 @@
 		9B7337F51DF83AF800EE9690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7337F31DF83AF800EE9690 /* Main.storyboard */; };
 		9B7337F71DF83AF800EE9690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7337F61DF83AF800EE9690 /* Assets.xcassets */; };
 		9B7337FA1DF83AF800EE9690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7337F81DF83AF800EE9690 /* LaunchScreen.storyboard */; };
+		9B7338021DF83B4400EE9690 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7338011DF83B4400EE9690 /* Realm.framework */; };
+		9B7338031DF83B4400EE9690 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7338011DF83B4400EE9690 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B7338071DF83B9400EE9690 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7338061DF83B9400EE9690 /* Person.m */; };
+		9B73380A1DF83BAD00EE9690 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7338091DF83BAD00EE9690 /* Cat.m */; };
+		9B73380C1DF83EC200EE9690 /* miao.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B73380B1DF83EC200EE9690 /* miao.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B7338041DF83B4400EE9690 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9B7338031DF83B4400EE9690 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9B7337E71DF83AF800EE9690 /* Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Realm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +45,12 @@
 		9B7337F61DF83AF800EE9690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B7337F91DF83AF800EE9690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B7337FB1DF83AF800EE9690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B7338011DF83B4400EE9690 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		9B7338051DF83B9400EE9690 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		9B7338061DF83B9400EE9690 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		9B7338081DF83BAD00EE9690 /* Cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cat.h; sourceTree = "<group>"; };
+		9B7338091DF83BAD00EE9690 /* Cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
+		9B73380B1DF83EC200EE9690 /* miao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = miao.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7338021DF83B4400EE9690 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +68,8 @@
 		9B7337DE1DF83AF800EE9690 = {
 			isa = PBXGroup;
 			children = (
+				9B73380B1DF83EC200EE9690 /* miao.png */,
+				9B7338011DF83B4400EE9690 /* Realm.framework */,
 				9B7337E91DF83AF800EE9690 /* Realm */,
 				9B7337E81DF83AF800EE9690 /* Products */,
 			);
@@ -58,6 +86,10 @@
 		9B7337E91DF83AF800EE9690 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				9B7338051DF83B9400EE9690 /* Person.h */,
+				9B7338061DF83B9400EE9690 /* Person.m */,
+				9B7338081DF83BAD00EE9690 /* Cat.h */,
+				9B7338091DF83BAD00EE9690 /* Cat.m */,
 				9B7337ED1DF83AF800EE9690 /* AppDelegate.h */,
 				9B7337EE1DF83AF800EE9690 /* AppDelegate.m */,
 				9B7337F01DF83AF800EE9690 /* ViewController.h */,
@@ -89,6 +121,7 @@
 				9B7337E31DF83AF800EE9690 /* Sources */,
 				9B7337E41DF83AF800EE9690 /* Frameworks */,
 				9B7337E51DF83AF800EE9690 /* Resources */,
+				9B7338041DF83B4400EE9690 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B7337FA1DF83AF800EE9690 /* LaunchScreen.storyboard in Resources */,
+				9B73380C1DF83EC200EE9690 /* miao.png in Resources */,
 				9B7337F71DF83AF800EE9690 /* Assets.xcassets in Resources */,
 				9B7337F51DF83AF800EE9690 /* Main.storyboard in Resources */,
 			);
@@ -152,7 +186,9 @@
 			files = (
 				9B7337F21DF83AF800EE9690 /* ViewController.m in Sources */,
 				9B7337EF1DF83AF800EE9690 /* AppDelegate.m in Sources */,
+				9B7338071DF83B9400EE9690 /* Person.m in Sources */,
 				9B7337EC1DF83AF800EE9690 /* main.m in Sources */,
+				9B73380A1DF83BAD00EE9690 /* Cat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +300,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Realm.framework",
+				);
 				INFOPLIST_FILE = Realm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lfm.Realm;
@@ -275,6 +316,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Realm.framework",
+				);
 				INFOPLIST_FILE = Realm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lfm.Realm;
