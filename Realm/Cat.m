@@ -21,4 +21,5 @@
     NSData *picture = UIImageJPEGRepresentation([UIImage imageNamed:@"miao"], 0.1);
     return @{@"picture":picture};
 }
+
 @end
