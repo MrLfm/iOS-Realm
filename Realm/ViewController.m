@@ -47,10 +47,10 @@
 
     // 默认数据库
     RLMRealm *realm = [RLMRealm defaultRealm];
-    // 执行数据库操作方法1
     
-    [realm transactionWithBlock:^{
 #pragma mark ----------增/改----------
+    // 执行数据库操作方法1
+    [realm transactionWithBlock:^{
         // 更改时根据主键判断
         [realm addOrUpdateObject:person1];
         [realm addOrUpdateObject:person2];
@@ -76,10 +76,25 @@
     RLMResults<Cat *> *cats = [Cat objectsWithPredicate:predicate];
     NSLog(@"Predicate查询：%@",cats);
     
-//    // 4 指定数据库查询
+    // 4 指定数据库查询
 //    RLMResults<Cat *> realmCats = [Cat objectsInRealm:oneRealm where:@"nickname = 'miao1'"];
 //    NSLog(@"指定数据库查询：%@",realmCats);
     
+#pragma mark ----------查询结果的使用，类似NSArray----------
+    // 遍历查询结果
+    for (Cat *cat in cats) {
+        
+        NSLog(@"猫咪昵称：%@",cat.nickname);
+    }
+    // 查询结果的第一个元素
+    Cat *firstCat = [cats firstObject];
+    NSLog(@"查询到的第一个猫咪：%@",firstCat);
+    // 或
+//    Cat *firstCat = cats[0];
+    // 查询结果的最后一个元素
+    Cat *lastCat  = [cats lastObject];
+    NSLog(@"查询到的最后一个猫咪：%@",lastCat);
+
 #pragma mark ----------删----------
     
     // 执行数据库操作方法2
