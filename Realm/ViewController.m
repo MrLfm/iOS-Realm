@@ -34,12 +34,13 @@
     Cat *cat3 = [[Cat alloc] initWithValue:@{@"nickname":@"miao3"}];
     Cat *cat4 = [[Cat alloc] initWithValue:@{@"nickname":@"miao4"}];
 
-    // 创建方法1
+    // 创建方法1 单个属性赋值
     Person *person1 = [[Person alloc] init];
     person1.name = @"XiaoMing";
     [person1.cats addObject:cat1];
     [person1.cats addObject:cat2];
-    // 创建方法2
+    
+    // 创建方法2 initWithValue
     Person *person2 = [[Person alloc] initWithValue:@{@"name":@"XiaoLi"}];
     [person2.cats addObject:cat3];
     [person2.cats addObject:cat4];
@@ -47,6 +48,7 @@
     // 默认数据库
     RLMRealm *realm = [RLMRealm defaultRealm];
     // 执行数据库操作方法1
+    
     [realm transactionWithBlock:^{
 #pragma mark ----------增/改----------
         // 更改时根据主键判断
@@ -73,6 +75,10 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"nickname BEGINSWITH %@",@"miao"];
     RLMResults<Cat *> *cats = [Cat objectsWithPredicate:predicate];
     NSLog(@"Predicate查询：%@",cats);
+    
+//    // 4 指定数据库查询
+//    RLMResults<Cat *> realmCats = [Cat objectsInRealm:oneRealm where:@"nickname = 'miao1'"];
+//    NSLog(@"指定数据库查询：%@",realmCats);
     
 #pragma mark ----------删----------
     
